@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quirijn Vervondel</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <!-- Font Awesome icons -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <style>
+        /* Zorg ervoor dat de header sticky blijft */
+        #mainNav {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white; /* Zorgt ervoor dat de achtergrond niet transparant wordt */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optionele schaduw voor zichtbaarheid */
+        }
+
+        /* Zorg ervoor dat de header-tekst altijd zwart blijft */
+        #mainNav .navbar-brand,
+        #mainNav .nav-link {
+            color: black !important;
+        }
+
+        /* Stijl voor de eerste sectie */
+        .content-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 0;
+        }
+
+        .content-text {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .content-text h2 {
+            color: #333;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .content-text p {
+            font-size: 18px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .content-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .content-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Tweede sectie: Waarom Airco? */
+        .why-airco {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+
+        .content-left, .content-right {
+            flex: 1;
+            padding: 20px;
+        }
+
+        #title-text {
+            font-size: 32px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        #description-text {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Kleuren eenvoudig aanpassen */
+        #title-text:hover {
+            color: #007bff;
+        }
+
+        #description-text:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body id="page-top">
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html#page-top">JV Solutions</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">Over mezelf</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#signup">Offerte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact-info">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</body>
+</html>
+
+
+    <!-- Eerste sectie -->
+    <section class="container content-section">
+        <div class="content-text">
+            <h2>Professionele Ventilatie</h2>
+            <p>
+                Goede ventilatie is essentieel voor een gezond en comfortabel binnenklimaat. Ik bied professionele installatie, onderhoud en optimalisatie van ventilatiesystemen, zodat u verzekerd bent van frisse en schone lucht in uw woning of bedrijf. Een goed ventilatiesysteem helpt vocht en schadelijke stoffen af te voeren, wat bijdraagt aan een betere luchtkwaliteit en een gezondere leefomgeving.
+            </p>
+            <a href="Offertegegevens.html" class="btn btn-primary">Vraag een offerte aan</a>
+        </div>
+        <div class="content-image">
+            <img src="assets/img/mechanische-ventilatie.jpg"alt="Airco Installatie">
+        </div>
+    </section>
+
+    <!-- Tweede sectie: Waarom een airco? -->
+    <section class="container content-section why-airco">
+        <div class="content-left">
+            <h2 id="title-text">WAAROM U TEGENWOORDIG NIET ZONDER EEN GOED VENTILATIESYSTEEM KUNT?</h2>
+        </div>
+        <div class="content-right">
+            <p id="description-text">
+               Goede ventilatie is cruciaal voor een gezond binnenklimaat, vooral in goed geïsoleerde woningen en kantoren. Door luchtdichte bouwtechnieken blijft vervuilde lucht langer hangen, wat kan leiden tot vochtproblemen en een ongezonde leefomgeving.
+
+Een goed ventilatiesysteem zorgt voor een constante toevoer van frisse lucht, voert schadelijke stoffen en vocht af en helpt allergieën en gezondheidsklachten te verminderen. Dit draagt bij aan uw welzijn, verhoogt uw concentratie en zorgt voor een comfortabele leef- en werkomgeving.
+            </p>
+        </div>
+    </section>
+<!-- Derde sectie: Fullscreen met 6 vakken -->
+<section class="third-section">
+    <hr class="section-divider">
+    <h2 class="section-title text-center" style="margin-bottom: 10px;">Waarom een ventilatiesysteem installeren?</h2>
+    <div class="container-fluid">
+        <div class="row w-100 text-center">
+            <div class="col-md-4 box">
+                <img src="assets/img/energie%20besparend.jpg" alt="Logo 1" class="box-logo">
+                <h3 class="box-title">Energiebesparend</h3>
+                <p class="box-text">Airco's zijn energiezuinig en helpen u om uw energiekosten te verlagen, wat een slimme keuze is voor zowel uw comfort als uw portemonnee.</p>
+            </div>
+            <div class="col-md-4 box">
+                <img src="assets/img/energie%20vriendelijk.jpg" alt="Logo 2" class="box-logo">
+                <h3 class="box-title">Milieu Vriendelijk</h3>
+                <p class="box-text">Airco's maken gebruik van milieuvriendelijke koelmiddelen en zijn ontworpen om uw ecologische voetafdruk te minimaliseren. Zo kunt u genieten van comfort met een goed geweten.</p>
+            </div>
+            <div class="col-md-4 box">
+                <img src="assets/img/enrgie%20zuinig.png" alt="Logo 3" class="box-logo">
+                <h3 class="box-title">Duurzaam Comfort</h3>
+                <p class="box-text">Airco's bieden een constante en betrouwbare koeling in uw huis of zaak, ongeacht de buitentemperatuur. Dit zorgt ervoor dat u binnen altijd kunt genieten van een comfortabele en aangename temperatuur.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Nieuwe sectie onder 'Waarom een airco installeren?' -->
+<section class="container content-section">
+    <div class="content-text">
+        <h2>Enige twijfel?</h2>
+        <p>
+           Onze offertes zijn 100% gratis en volledig vrijblijvend. Je betaalt niets en zit nergens aan vast!
+        </p>
+        <a href="Offertegegevens.html" class="btn btn-primary">Vraag een offerte aan</a>
+    </div>
+    <div class="content-image">
+        <img src="assets/img/airco-unit.jpg" alt="Extra Airco Installatie">
+    </div>
+</section>
+<hr class="section-divider">
+<h2 class="section-title text-center" style="margin-bottom: 10px;">Waarom een airco installeren met JV Solutions?</h2>
+
+<!-- Vierde sectie: Waarom kiezen voor VS Klima? -->
+<section class="fourth-section">
+    <div class="container-fluid">
+        <div class="row w-100 text-center">
+            <div class="col-md-4 box">
+                <img src="assets/img/proffes.png" alt="Logo 7" class="box-logo">
+                <h3 class="box-title">Professionele Installatie</h3>
+                <p class="box-text">Onze gecertificeerde installateurs zorgen voor een veilige en efficiënte plaatsing van uw airco, zodat u jarenlang zorgeloos kunt genieten van optimaal comfort.</p>
+            </div>
+            <div class="col-md-4 box">
+                <img src="assets/img/kwaliteit.png" alt="Logo 8" class="box-logo">
+                <h3 class="box-title">Kwaliteits Grantie</h3>
+                <p class="box-text">Wij helpen u bij het kiezen van de juiste airco voor uw specifieke situatie, met oog op energiezuinigheid en prestaties.</p>
+            </div>
+            <div class="col-md-4 box">
+                <img src="assets/img/fast%20del.jpg" alt="Logo 9" class="box-logo">
+                <h3 class="box-title">Uitstekende Klantenservice</h3>
+                <p class="box-text">Wij bieden onderhoudscontracten en snelle service, zodat uw airco altijd optimaal blijft functioneren en u geen last heeft van onverwachte storingen.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .third-section, {
+        width: 100%;
+        height: 100vh;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+    }
+
+    .section-divider {
+        width: 80%;
+        border: 2px solid #333;
+        margin: 20px auto;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        flex: 1;
+        max-width: 25%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .box-logo {
+        width:150px;
+        height: 150px;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+
+    .box-title {
+        font-size:16px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .box-text {
+        font-size: 14px;
+        color: #333;
+        text-align: center;
+    }
+</style>
+
+<!-- Vijfde sectie: FAQ -->
+<section class="fifth-section">
+    <h2 class="section-title text-center">FAQ</h2>
+    <div class="container">
+        <div class="accordion" id="faqAccordion">
+
+            <!-- Vraag 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Waarom is goede ventilatie zo belangrijk?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Goede ventilatie zorgt voor een gezonde luchtkwaliteit door vocht, CO₂ en schadelijke stoffen af te voeren. Dit voorkomt gezondheidsproblemen en schimmelvorming.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vraag 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Hoe vaak moet ik mijn ventilatiesysteem reinigen?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Het is aan te raden om uw ventilatiesysteem jaarlijks te laten reinigen en filters elke 3 tot 6 maanden te vervangen voor optimale werking.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vraag 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Helpt ventilatie tegen vochtproblemen?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Ja! Een goed ventilatiesysteem voorkomt vochtophoping en schimmelvorming door een continue luchtstroom te creëren en overtollig vocht af te voeren.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vraag 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Is mechanische ventilatie beter dan natuurlijke ventilatie?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Mechanische ventilatie zorgt voor een constante luchtverversing, ongeacht de weersomstandigheden. Dit biedt betere controle over luchtkwaliteit en vochtbalans in huis.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vraag 5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Kan een ventilatiesysteem helpen bij allergieën?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Absoluut! Ventilatiesystemen met goede filters verwijderen pollen, stof en allergenen uit de lucht, wat de symptomen van allergieën aanzienlijk kan verminderen.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .fifth-section {
+        width: 100%;
+        padding: 60px 0;
+        background-color: #ffffff;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .accordion {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .accordion-item {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+    .accordion-button {
+        background-color: #f8f9fa;
+        color: #333;
+        font-weight: bold;
+        text-align: left;
+        padding: 15px;
+        width: 100%;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .accordion-button:hover {
+        background-color: #e9ecef;
+    }
+
+    .accordion-body {
+        padding: 15px;
+        text-align: left;
+        color: #333;
+    }
+
+    .accordion-button:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .accordion-collapse {
+        transition: height 0.3s ease;
+    }
+</style>
+<!-- Zesde sectie: Gratis Offerte Banner -->
+<section class="sixth-section">
+    <div class="banner">
+        <div class="overlay"></div> <!-- Toegevoegde overlay -->
+        <div class="text-box">
+            <h2>Vraag een gratis offerte aan</h2>
+            <p>Onze offertes zijn volledig gratis en vrijblijvend. Neem contact met ons op en ontdek wat wij voor jou kunnen betekenen!</p>
+            <a href="Offertegegevens.html" class="btn-primary">Gratis Offerte Aanvragen</a> <!-- Link aangepast -->
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Zesde sectie styling */
+    .sixth-section {
+        width: 100%;
+        height: 60vh; /* Hoogte van de banner */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    /* Achtergrondafbeelding */
+    .banner {
+        width: 100%;
+        height: 100%;
+        background: url('assets/img/mechanische-ventilatie.jpg') no-repeat center center/cover;
+        position: relative;
+    }
+
+    /* Overlay laag voor opacity effect */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); /* Pas deze waarde aan voor meer/minder donker */
+    }
+
+    /* Witte kader met tekst */
+    .text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        max-width: 500px;
+        width: 90%;
+    }
+
+    .text-box h2 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .text-box p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    /* Call-to-action button */
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        transition: background 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    /* Responsieve aanpassing voor kleinere schermen */
+    @media (max-width: 768px) {
+        .sixth-section {
+            height: 50vh;
+        }
+
+        .text-box {
+            width: 90%;
+            padding: 20px;
+        }
+
+        .text-box h2 {
+            font-size: 20px;
+        }
+
+        .text-box p {
+            font-size: 14px;
+        }
+    }
+</style>
+
+
+
+
+
+<!-- Custom Footer -->
+<footer class="custom-footer">
+    <div class="footer-container">
+        <!-- Eerste sectie: Onze Diensten -->
+        <div class="footer-section">
+            <h3>Onze Diensten</h3>
+            <ul class="footer-links">
+                <li><a href="Airco.html">Airco</a></li>
+                <li><a href="Ventilatie.html">Ventilatie</a></li>
+                <li><a href="Verwarming.html">Verwarming</a></li>
+                <li><a href="Cooling.html">Cooling</a></li>
+                <li><a href="Elek.html">Elektrische diensten</a></li>
+            </ul>
+        </div>
+
+        <!-- Tweede sectie: Contactgegevens -->
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:info@bedrijf.nl">info@bedrijf.nl</a></p>
+            <p>Telefoon: <a href="tel:+123456789">+31 6 12345678</a></p>
+            <p>Adres: Katveld 12, 1000 AB Amsterdam</p>
+        </div>
+
+        <!-- Derde sectie: Sociale Media -->
+        <div class="footer-section center-align">
+            <h3>Volg Ons</h3>
+            <div class="social-icons">
+                <a href="#"><img src="assets/img/facebook.webp" alt="Facebook"></a>
+                <a href="#"><img src="assets/img/instagram.webp" alt="Instagram"></a>
+                <a href="#"><img src="assets/img/linkedin.webp" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    /* Algemene styling voor de footer */
+    .custom-footer {
+        background-color: #222;
+        color: white;
+        padding: 40px 20px;
+    }
+
+    .footer-container {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-section {
+        flex: 1;
+        min-width: 250px;
+        padding: 10px;
+    }
+
+    .footer-section h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #f8f9fa;
+    }
+
+    /* Diensten & Contact naar links uitlijnen */
+    .footer-section:not(.center-align) {
+        text-align: left;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links li {
+        margin: 5px 0;
+    }
+
+    .footer-links a {
+        color: #bbb;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: #007bff;
+    }
+
+    /* Contactgegevens styling */
+    .footer-section p, .footer-section a {
+        color: #bbb;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    /* Sociale media sectie in het midden */
+    .center-align {
+        text-align: center;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease;
+    }
+
+    .social-icons img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Responsief design */
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            text-align: left;
+            align-items: center;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .center-align {
+            text-align: center;
+        }
+    }
+</style>
+
+
+
+
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

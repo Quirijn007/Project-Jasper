@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quirijn Vervondel</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <!-- Font Awesome icons -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <style>
+        #mainNav {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: #ffffff !important;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 10px 0;
+        }
+
+        #mainNav .navbar-brand,
+        #mainNav .nav-link {
+            color: #000 !important;
+        }
+
+        .customer-form-section {
+            background-color: #ffffff;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .customer-form-section h2 {
+            color: #00aebb;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-radius: 8px;
+            font-size: 18px;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+        function toggleSubmitButton() {
+            document.getElementById("submitButton").disabled = !document.getElementById("confirmEmail").checked;
+        }
+
+        function openEmail() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var street = document.getElementById("street").value;
+            var houseNumber = document.getElementById("houseNumber").value;
+            var city = document.getElementById("city").value;
+            var postcode = document.getElementById("postcode").value;
+            var service = document.getElementById("service").value;
+            var message = document.getElementById("message").value;
+
+            if (!document.getElementById("confirmEmail").checked) {
+                alert("U moet bevestigen dat u de e-mail zelf nog moet versturen.");
+                return;
+            }
+
+            if (service === "") {
+                alert("Selecteer een service voordat u de offerte aanvraagt.");
+                return;
+            }
+
+            var emailBody = 
+                "Graag zou ik een gratis offerte aanvragen voor:\n\n" +
+                "Service: " + service + "\n\n" +
+                "Naam: " + name + "\n" +
+                "E-mail: " + email + "\n" +
+                "Telefoonnummer: " + phone + "\n\n" +
+                "Adres: " + street + " " + houseNumber + ", " + postcode + " " + city + "\n\n" +
+                "Bericht:\n" + (message.trim() ? message : "Geen extra bericht opgegeven.") + "\n\n" +
+                "Met vriendelijke groeten,";
+
+            window.location.href = "mailto:quirijn.vervondel@gmail.com?subject=Gratis Offerte Aanvraag voor " + encodeURIComponent(service) + "&body=" + encodeURIComponent(emailBody);
+        }
+    </script>
+</head>
+<body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html#page-top">JV Solutions</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">Over mezelf</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#signup">Offerte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact-info">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="customer-form-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-center">Klantengegevens</h2>
+                    <hr>
+
+                    <form onsubmit="event.preventDefault(); openEmail();">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Naam *</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mailadres *</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Telefoonnummer *</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Kies de service *</label>
+                            <select class="form-control" id="service" required>
+                                <option value="">Maak een keuze</option>
+                                <option value="Ventilatie">Ventilatie</option>
+                                <option value="Airco">Airco</option>
+                                <option value="Warmtepomp">Warmtepomp</option>
+                                <option value="Onderhoud">Onderhoud</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="street" class="form-label">Straat *</label>
+                            <input type="text" class="form-control" id="street" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="houseNumber" class="form-label">Huisnummer *</label>
+                            <input type="text" class="form-control" id="houseNumber" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="city" class="form-label">Stad / Gemeente *</label>
+                            <input type="text" class="form-control" id="city" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="postcode" class="form-label">Postcode *</label>
+                            <input type="text" class="form-control" id="postcode" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Bericht</label>
+                            <textarea class="form-control" id="message" rows="4"></textarea>
+                            <small class="text-muted d-block mt-2">
+                                Let op: Na het klikken op "Verzenden" opent uw e-mailprogramma. U moet de e-mail zelf nog versturen.
+                            </small>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="confirmEmail" required onchange="toggleSubmitButton()">
+                            <label class="form-check-label" for="confirmEmail">
+                                Ik begrijp dat ik de e-mail zelf nog moet versturen.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100" id="submitButton" disabled>Verzenden</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Custom Footer -->
+<footer class="custom-footer">
+    <div class="footer-container">
+        <!-- Eerste sectie: Onze Diensten -->
+        <div class="footer-section">
+            <h3>Onze Diensten</h3>
+            <ul class="footer-links">
+                <li><a href="Airco.html">Airco</a></li>
+                <li><a href="Ventilatie.html">Ventilatie</a></li>
+                <li><a href="Verwarming.html">Verwarming</a></li>
+                <li><a href="Cooling.html">Cooling</a></li>
+                <li><a href="Elek.html">Elektrische diensten</a></li>
+            </ul>
+        </div>
+
+        <!-- Tweede sectie: Contactgegevens -->
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:info@bedrijf.nl">info@bedrijf.nl</a></p>
+            <p>Telefoon: <a href="tel:+123456789">+31 6 12345678</a></p>
+            <p>Adres: Katveld 12, 1000 AB Amsterdam</p>
+        </div>
+
+        <!-- Derde sectie: Sociale Media -->
+        <div class="footer-section center-align">
+            <h3>Volg Ons</h3>
+            <div class="social-icons">
+                <a href="#"><img src="assets/img/facebook.webp" alt="Facebook"></a>
+                <a href="#"><img src="assets/img/instagram.webp" alt="Instagram"></a>
+                <a href="#"><img src="assets/img/linkedin.webp" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    /* Algemene styling voor de footer */
+    .custom-footer {
+        background-color: #222;
+        color: white;
+        padding: 40px 20px;
+    }
+
+    .footer-container {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-section {
+        flex: 1;
+        min-width: 250px;
+        padding: 10px;
+    }
+
+    .footer-section h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #f8f9fa;
+    }
+
+    /* Diensten & Contact naar links uitlijnen */
+    .footer-section:not(.center-align) {
+        text-align: left;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links li {
+        margin: 5px 0;
+    }
+
+    .footer-links a {
+        color: #bbb;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: #007bff;
+    }
+
+    /* Contactgegevens styling */
+    .footer-section p, .footer-section a {
+        color: #bbb;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    /* Sociale media sectie in het midden */
+    .center-align {
+        text-align: center;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease;
+    }
+
+    .social-icons img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Responsief design */
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            text-align: left;
+            align-items: center;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .center-align {
+            text-align: center;
+        }
+    }
+</style>
+
+
+
+
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
